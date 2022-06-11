@@ -48,9 +48,6 @@ ntrig =>
     nCCTL
   # RW
 
-q =>
-    !RW & !nCCTL
-
 trig =>
     !RW & !nCCTL
 

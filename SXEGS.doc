@@ -5,7 +5,7 @@
 
 CUPL(WM)        5.0a Serial# 60008009
 Device          g16v8ms  Library DLIB-h-40-11
-Created         Sat Jun 11 10:51:06 2022
+Created         Sat Jun 11 15:03:48 2022
 Name            SXEGS 
 Partno          00 
 Revision        01 
@@ -48,9 +48,6 @@ nRW =>
 ntrig =>
     nCCTL
   # RW
-
-q =>
-    !RW & !nCCTL
 
 trig =>
     !RW & !nCCTL
@@ -102,7 +99,6 @@ Pol   Name              Ext     Pin     Type     Used   Pterms  Level
     nS4                         5        V        -       -       -     
     nS5                         19       V        -       -       -     
     ntrig                       0        I        2       -       -     
-    q                           0        I        1       -       -     
     trig                        0        I        1       -       -     
     x                           0        I        1       -       -     
     y                           0        I        2       -       -     

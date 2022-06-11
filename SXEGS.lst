@@ -3,7 +3,7 @@ LISTING FOR LOGIC DESCRIPTION FILE: SXEGS.pld                        Page 1
 CUPL(WM): Universal Compiler for Programmable Logic
 Version 5.0a Serial# 60008009
 Copyright (c) 1983, 1998 Logical Devices, Inc.
-Created Sat Jun 11 10:51:06 2022
+Created Sat Jun 11 15:03:48 2022
 
   1:Name     SXEGS ;
   2:PartNo   00 ;
@@ -45,19 +45,18 @@ Created Sat Jun 11 10:51:06 2022
  38:
  39:CCTL = ( !nCCTL );
  40:trig = ( CCTL  & nRW  );
- 41:q = trig;
- 42:LATCH.D = trig & q;
- 43:
- 44:nD7 = ( !D7 );
- 45:ntrig = !trig;
- 46:x = trig & nD7;
- 47:y = ntrig & RD;
- 48:H = x # y;
- 49:RD.D = H;
+ 41:LATCH.D = trig;
+ 42:
+ 43:nD7 = ( !D7 );
+ 44:ntrig = !trig;
+ 45:x = trig & nD7;
+ 46:y = ntrig & RD;
+ 47:H = x # y;
+ 48:RD.D = H;
+ 49:
  50:
- 51:
 
 
 
 Jedec Fuse Checksum       (3060)
-Jedec Transmit Checksum   (b76a)
+Jedec Transmit Checksum   (b772)

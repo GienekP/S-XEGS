@@ -38,8 +38,7 @@ OE = nRW;
 
 CCTL = ( !nCCTL );
 trig = ( CCTL  & nRW  );
-q = trig;
-LATCH.D = trig & q;
+LATCH.D = trig;
 
 nD7 = ( !D7 );
 ntrig = !trig;
