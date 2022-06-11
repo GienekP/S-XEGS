@@ -1,0 +1,49 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Sat Jun 11 11:04:19 2022
+
+LISTING FOR SIMULATION FILE: SXEGS.si
+
+   1: Name     SXEGS;
+   2: PartNo   00;
+   3: Date     2022-06-07;
+   4: Revision 01;
+   5: Designer GienekP;
+   6: Company  ;
+   7: Assembly None;
+   8: Location ;
+   9: Device   g16v8ms;
+  10: 
+  11: 
+  12: ORDER: F2, RW, OE, nCCTL, LATCH, D7, RD, nS4, nS5, CE; 
+  13: 
+  14: 
+
+===================
+         nL        
+         CA        
+         CT  nn    
+      FROTCDRSSC   
+      2WELH7D45E   
+===================
+0001: 01L1L1H11H
+0002: 11L1L1H01L
+0003: 01L1L1H01L
+0004: 10H1L0H01L
+0005: 00H1L0H01L
+0006: 11L1L1H10L
+0007: 01L1L1H10L
+0008: 10H1L1H10L
+0009: 00H1L1H10L
+0010: 11L1L1H11H
+0011: 01L1L1H11H
+0012: 11L0L1H11H
+0013: 01L0L1H11H
+0014: 10H0L0H11H
+0015: 00H0H0H11H
+0016: 11L0H1H11H
+0017: 01L0L1H11H
+0018: 10H0L1H11H
+0019: 00H0H1L11H
+0020: 11L1H1L11H
