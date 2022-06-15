@@ -3,7 +3,7 @@ LISTING FOR LOGIC DESCRIPTION FILE: SXEGS.pld                        Page 1
 CUPL(WM): Universal Compiler for Programmable Logic
 Version 5.0a Serial# 60008009
 Copyright (c) 1983, 1998 Logical Devices, Inc.
-Created Sat Jun 11 15:03:48 2022
+Created Wed Jun 15 17:03:42 2022
 
   1:Name     SXEGS ;
   2:PartNo   00 ;
@@ -21,42 +21,43 @@ Created Sat Jun 11 15:03:48 2022
  14:PIN 3  = nCCTL;
  15:PIN 4  = D7;
  16:PIN 5  = nS4;
- 17:/*PIN 6  = In6
- 18:PIN 7  = In7
- 19:PIN 8  = In8
- 20:PIN 9  = In9
- 21:PIN 10 = !OE;*/
+ 17:PIN 6  = In6;
+ 18:PIN 7  = In7;
+ 19:PIN 8  = In8;
+ 20:PIN 9  = In9;
+ 21:PIN 10 = In10;
  22:PIN 19 = nS5;
  23:
  24:/* *************** OUTPUT PINS *********************/
  25:PIN 12 = LATCH;
  26:PIN 13 = OE;
  27:PIN 14 = CE;
- 28:PIN 15 = A;
- 29:PIN 16 = B;
+ 28:PIN 15 = WE;
+ 29:PIN 16 = T;
  30:PIN 17 = H;
  31:PIN 18 = RD;
  32:
  33:/* ****************** LOGIC ************************/
- 34:CE = ( nS4 & nS5 );
- 35:
- 36:nRW = ( !RW );
- 37:OE = nRW;
+ 34:WE = 'b'1;
+ 35:OE = 'b'0;
+ 36:T  = 'b'0;
+ 37:CE = ( nS4 & nS5 );
  38:
- 39:CCTL = ( !nCCTL );
- 40:trig = ( CCTL  & nRW  );
- 41:LATCH.D = trig;
- 42:
- 43:nD7 = ( !D7 );
- 44:ntrig = !trig;
- 45:x = trig & nD7;
- 46:y = ntrig & RD;
- 47:H = x # y;
- 48:RD.D = H;
- 49:
+ 39:LATCH.D = ( nCCTL # RW );
+ 40:
+ 41:CCTL = ( !nCCTL );
+ 42:nD7 = ( !D7 );
+ 43:nRW = ( !RW );
+ 44:trig = ( CCTL  & nRW  );
+ 45:ntrig = !trig;
+ 46:x = trig & nD7;
+ 47:y = ntrig & RD;
+ 48:H = x # y;
+ 49:RD.D = H;
  50:
+ 51:
 
 
 
-Jedec Fuse Checksum       (3060)
-Jedec Transmit Checksum   (b772)
+Jedec Fuse Checksum       (3c7f)
+Jedec Transmit Checksum   (cef1)

@@ -14,33 +14,34 @@ PIN 2  = RW;
 PIN 3  = nCCTL;
 PIN 4  = D7;
 PIN 5  = nS4;
-/*PIN 6  = In6
-PIN 7  = In7
-PIN 8  = In8
-PIN 9  = In9
-PIN 10 = !OE;*/
+PIN 6  = In6;
+PIN 7  = In7;
+PIN 8  = In8;
+PIN 9  = In9;
+PIN 10 = In10;
 PIN 19 = nS5;
 
 /* *************** OUTPUT PINS *********************/
 PIN 12 = LATCH;
 PIN 13 = OE;
 PIN 14 = CE;
-PIN 15 = A;
-PIN 16 = B;
+PIN 15 = WE;
+PIN 16 = T;
 PIN 17 = H;
 PIN 18 = RD;
 
 /* ****************** LOGIC ************************/
+WE = 'b'1;
+OE = 'b'0;
+T  = 'b'0;
 CE = ( nS4 & nS5 );
 
-nRW = ( !RW );
-OE = nRW;
+LATCH.D = ( nCCTL # RW );
 
 CCTL = ( !nCCTL );
-trig = ( CCTL  & nRW  );
-LATCH.D = trig;
-
 nD7 = ( !D7 );
+nRW = ( !RW );
+trig = ( CCTL  & nRW  );
 ntrig = !trig;
 x = trig & nD7;
 y = ntrig & RD;

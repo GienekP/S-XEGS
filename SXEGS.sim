@@ -1,14 +1,19 @@
 %SIGNAL
-PIN  15 =  A 
-PIN  16 =  B 
 PIN  14 =  CE 
 PIN   4 =  D7 
 PIN   1 = !F2 
 PIN  17 =  H 
+PIN   6 =  In6 
+PIN   7 =  In7 
+PIN   8 =  In8 
+PIN   9 =  In9 
+PIN  10 =  In10 
 PIN  12 =  LATCH 
 PIN  13 =  OE 
 PIN  18 =  RD 
 PIN   2 =  RW 
+PIN  16 =  T 
+PIN  15 =  WE 
 PIN   3 =  nCCTL 
 PIN   5 =  nS4 
 PIN  19 =  nS5 
@@ -30,13 +35,20 @@ H =>
   # RD & RW
 
 LATCH.d  =>
-    !RW & !nCCTL
+    nCCTL
+  # RW
 
 OE =>
-    !RW
+    0 
 
 RD.d  =>
     H
+
+T =>
+    0 
+
+WE =>
+    1 
 
 nD7 =>
     !D7
@@ -65,6 +77,12 @@ H.oe  =>
     1 
 
 OE.oe  =>
+    1 
+
+T.oe  =>
+    1 
+
+WE.oe  =>
     1 
 
 nS5.oe  =>
