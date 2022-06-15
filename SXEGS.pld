@@ -18,7 +18,7 @@ PIN 6  = In6;
 PIN 7  = In7;
 PIN 8  = In8;
 PIN 9  = In9;
-PIN 10 = In10;
+PIN 11 = En;
 PIN 19 = nS5;
 
 /* *************** OUTPUT PINS *********************/

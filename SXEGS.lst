@@ -3,7 +3,7 @@ LISTING FOR LOGIC DESCRIPTION FILE: SXEGS.pld                        Page 1
 CUPL(WM): Universal Compiler for Programmable Logic
 Version 5.0a Serial# 60008009
 Copyright (c) 1983, 1998 Logical Devices, Inc.
-Created Wed Jun 15 17:03:42 2022
+Created Wed Jun 15 19:10:27 2022
 
   1:Name     SXEGS ;
   2:PartNo   00 ;
@@ -25,7 +25,7 @@ Created Wed Jun 15 17:03:42 2022
  18:PIN 7  = In7;
  19:PIN 8  = In8;
  20:PIN 9  = In9;
- 21:PIN 10 = In10;
+ 21:PIN 11 = En;
  22:PIN 19 = nS5;
  23:
  24:/* *************** OUTPUT PINS *********************/
@@ -60,4 +60,4 @@ Created Wed Jun 15 17:03:42 2022
 
 
 Jedec Fuse Checksum       (3c7f)
-Jedec Transmit Checksum   (cef1)
+Jedec Transmit Checksum   (cef4)
